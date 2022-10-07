@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "f73305c2-5813-405f-b151-72f623b025a0",
+		"name": "advertising campaigns",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9505131"
+	},
+	"item": [
+		{
+			"name": "Get All Campaigns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/advertisement",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"advertisement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete   Campaigns",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/advertisement/48",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"advertisement",
+						"48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create  Campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "advertismen 1",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "12/12/2022",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "12/12/2023",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "12.12",
+							"type": "text"
+						},
+						{
+							"key": "daily_budget",
+							"value": "12.12",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/home/kero/Desktop/8.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/v1/advertisement",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"advertisement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update  Campaign",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/v1/advertisement/48?name=sds&from=12/12/2022&to=12/12/2023&total=12.12&daily_budget=12.13&",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"advertisement",
+						"48"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "sds"
+						},
+						{
+							"key": "from",
+							"value": "12/12/2022"
+						},
+						{
+							"key": "to",
+							"value": "12/12/2023"
+						},
+						{
+							"key": "total",
+							"value": "12.12"
+						},
+						{
+							"key": "daily_budget",
+							"value": "12.13"
+						},
+						{
+							"key": "documentp[]",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
